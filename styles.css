@@ -1,0 +1,155 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Mobile First Stylesheet */
+html {
+    font-size: 62.5%;
+    font-family: Roboto, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #E0FBFC;
+    color: #293241;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div.eight-ball {
+    background-color: #293241;
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+div.message {
+    width: 150px;
+    height: 150px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.message p {
+    text-align: center;
+    font-weight: 400;
+    color: #3D5A80;
+    font-size: 2.4rem;
+    padding: 8px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer button {
+    width: 25%;
+    height: 4rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: #EE6C4D;
+    color: #ffffff;
+    touch-action: manipulation;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  .apply-shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
