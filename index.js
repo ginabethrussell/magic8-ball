@@ -1,5 +1,11 @@
 // Create a shake animation and display a fortune when user clicks button
 
+function shakeBall(){
+    const ball = document.querySelector('.eight-ball');
+    ball.classList.add("apply-shake");
+    setTimeout(displayFortune, 820);
+}
+
 function displayFortune() {
     const fortunes = ["Yes, definitely", "You can rely on it.", "Without a doubt.", "Most likely.",
      "Hmm... I'm not sure!", "Yikes. Nope.", "Try again.", "Very doubtful.", "Wouldn't if I were you.",
@@ -9,15 +15,7 @@ function displayFortune() {
     document.getElementById('fortune').innerText = fortune;
     const ball = document.querySelector('.eight-ball');
     ball.classList.remove('apply-shake');
-    setTimeout(replace8, 2000);
-}
-
-function shakeBall(){
-    const num8 = document.getElementById('num');
-    num8.innerHTML = '8';
-    const ball = document.querySelector('.eight-ball');
-    ball.classList.add("apply-shake");
-    setTimeout(displayFortune, 1000);
+    setTimeout(replace8, 1500);
 }
 
 function replace8(){
