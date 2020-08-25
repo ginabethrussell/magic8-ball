@@ -47,7 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* Mobile First Stylesheet */
+/* Stylesheet */
 html {
     font-size: 62.5%;
     font-family: Lato, sans-serif;
@@ -55,24 +55,33 @@ html {
 * {
     box-sizing: border-box;
 }
-.container {
+.container-outer {
     width: 100%;
-    max-width: 500px;
+    background: #FDFFB6;
     margin: 0 auto;
-    background-color: #E0FBFC;
+}
+.container-middle {
+    width: 75%;
+    background: #FFADAD;
+    margin: 0 auto;
+}
+.container {
+    width: 60%;
+    max-width: 650px;
+    margin: 0 auto;
+    background: #CAFFBF;
     color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100vh;
     padding: 50px;
 }
 header h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     text-align: center;
-
 }
 main {
     display: flex;
@@ -80,10 +89,15 @@ main {
     align-items: center;
     justify-content: center;
 }
+main a {
+    text-decoration: none;
+    color: black;
+    touch-action: manipulation;
+}
 div.eight-ball {
     background-color: #000000;
-    width: 250px;
-    height:250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -93,8 +107,8 @@ div.eight-ball {
     box-shadow:  0 0 15px  rgba(0,0,0,0.6);
 }
 div.message {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: #FFFFFF;
     text-align: center;
     border-radius: 50%;
@@ -106,7 +120,7 @@ div.message p {
     text-align: center;
     font-weight: 400;
     color: #000000;
-    font-size: 2.4rem;
+    font-size: 3rem;
     padding: 8px;
 }
 footer {
@@ -117,21 +131,12 @@ footer {
     width: 100%;
 }
 footer h2 {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 400;
+    font-style: italic;
     text-align: center;
     margin-bottom: 20px;
-}
-footer button {
-    width: 25%;
-    height: 4rem;
-    border: 0;
-    border-radius: 5px;
-    background-color: #EE6C4D;
-    color: #ffffff;
-    touch-action: manipulation;
-    font-size: 2.4rem;
-    font-weight: 400;
+    line-height: 1.4;
 }
 @keyframes shake {
     10%, 90% {
@@ -153,4 +158,55 @@ footer button {
   
   .apply-shake {
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  @media (max-width: 1000px){
+    .container {
+        width: 80%;
+    }
+    div.eight-ball { 
+        width: 250px;
+        height: 250px;    
+    }
+    div.message {
+        width: 150px;
+        height: 150px;
+    }
+  }
+  @media (max-width: 500px){
+    .container-outer, container-middle {
+        width: 0%;
+        background: #CAFFBF;
+        margin: 0 auto;
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        min-width: 320px;
+        margin: 0 auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 4rem;  
+    }
+    div.eight-ball { 
+        width: 250px;
+        height: 250px;    
+    }
+    div.message {
+        width: 150px;
+        height: 150px;
+    }
+    div.message p {
+        font-size: 2.4rem;
+    }
+    footer h2 {
+        font-size: 2.4rem;
+    } 
   }
