@@ -7,9 +7,13 @@ function shakeBall(){
 }
 
 function displayResponse() {
-    const responses = ["Yes, definitely", "You can rely on it.", "Without a doubt.", "Most likely.",
-     "Hmm... I'm not sure!", "Yikes. Nope.", "Try again.", "Very doubtful.", "Wouldn't if I were you.",
-      "Ask again later."];
+    //includes 20 original 8-Ball responses from Wikipedia
+    const responses = ["Outlook not so good.", "My sources say no.", "My reply is no.",
+    "Don't count on it.", "Concentrate, and ask again.", "Cannot predict now.","Better not tell you now.",
+    "Reply hazy, try again.", "Signs point to yes.", "Yes.", "Outlook good.","As I see it, yes.",
+    "It is decidedly so.", "It is certain.", "Yes, definitely", "You can rely on it.", "Without a doubt.",
+    "Most likely.", "Very doubtful.", "Ask again later."];
+
     const answer = Math.floor(Math.random() * responses.length);
     response = responses[answer];
     document.getElementById('answer').innerText = response;

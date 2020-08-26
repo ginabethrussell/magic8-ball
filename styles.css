@@ -138,6 +138,16 @@ footer h2 {
     margin-bottom: 20px;
     line-height: 1.4;
 }
+footer p {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+footer p a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
 @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
